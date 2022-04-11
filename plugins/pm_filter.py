@@ -73,7 +73,7 @@ async def give_filter(client,message):
                 break 
 
     else:
-        await auto_filter(client, message)
+        await give_filter(client, message)
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
