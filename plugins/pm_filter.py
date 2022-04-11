@@ -815,7 +815,7 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", cap, reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             
     else:
         await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)), 
