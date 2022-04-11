@@ -804,10 +804,10 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/Film_housc'>ᴄɪɴᴇᴍᴀ ᴄᴏᴍᴘᴀɴʏ</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 minutes to avoid copyright issues.</s>"
+        cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-            await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", caption=cap[:1024],
+            await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg",  caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -815,10 +815,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-           
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)), 
+        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     if spoll:
         await msg.message.delete()
 
