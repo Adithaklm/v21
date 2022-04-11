@@ -810,7 +810,7 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo="https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg", caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
+            pic = "https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg"
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
