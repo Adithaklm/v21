@@ -842,7 +842,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        Photo = "https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg"
+        Pic = "https://telegra.ph/file/cd60770fbe1b21d8739fa.jpg"
         cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b>ᴄɪɴᴇᴍᴀ ᴄᴏᴍᴘᴀɴʏ</b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 minutes to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
@@ -857,7 +857,7 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             
     else:
-        await message.reply_photo(photo, cap, reply_markup=InlineKeyboardMarkup(btn)), 
+        await message.reply_photo(pic, cap, reply_markup=InlineKeyboardMarkup(btn)), 
     if spoll:
         await msg.message.delete()
 
