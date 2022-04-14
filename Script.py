@@ -117,7 +117,9 @@ Tʜɪꜱ ᴍᴏᴅᴜʟᴇ ᴏɴʟʏ ᴡᴏʀᴋꜱ ғᴏʀ ᴍʏ ᴀᴅᴍɪɴ�
 • ᴜꜱᴇʀɴᴀᴍᴇ : @Brocklesnarqt
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/my_devs>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     IDM_TEXT = """🎪 Tɪᴛʟᴇ : {}
-🤴 ᴀsᴋᴇᴅ ʙʏ : {}"""
+┏ 🤴 ᴀsᴋᴇᴅ ʙʏ : {}
+┣ ⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {}
+┗ 🍁 ᴄʜᴀɴɴᴇʟ : @Calinkz"""
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
 Total Members = <code>{}</code>
